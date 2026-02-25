@@ -45,6 +45,12 @@ RLS:
 - Supabaseが /auth/callback に戻す
 - callbackでセッション確立 → /projects へリダイレクト
 
+## 今後の拡張想定
+- projectsの編集機能（UPDATE）
+- tasksテーブル追加による階層構造
+- 入力バリデーション強化
+- UI/UX改善
+
 ## How to Run (Local)
 1. `.env.local` を作成
 - NEXT_PUBLIC_SUPABASE_URL
