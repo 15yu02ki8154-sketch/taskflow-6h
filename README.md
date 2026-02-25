@@ -19,6 +19,17 @@
 - Supabase（Auth / Postgres / RLS）
 - Vercel
 
+## Architecture / 設計意図
+- App Routerを使用し、ページ単位で責務を分離
+- SupabaseのRLSを活用し、フロント側ではなくDB側でデータ保護を担保
+- 認証callbackはSuspense境界でラップし、ビルドエラーを回避
+- user_idを必ず持たせる設計にすることでマルチユーザー対応を前提とした構造
+
+## ERD（簡易）
+auth.users (Supabase)
+   1 ─── n
+projects (user_id)
+
 ## DB Schema（概要）
 projects
 - id: uuid (PK)
@@ -43,3 +54,9 @@ RLS:
 ```bash
 npm install
 npm run dev
+
+## 今後の拡張想定
+- projectsの編集機能（UPDATE）
+- tasksテーブル追加による階層構造
+- 入力バリデーション強化
+- UI/UX改善
