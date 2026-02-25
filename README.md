@@ -55,8 +55,5 @@ RLS:
 npm install
 npm run dev
 
-## 今後の拡張想定
-- projectsの編集機能（UPDATE）
-- tasksテーブル追加による階層構造
-- 入力バリデーション強化
-- UI/UX改善
+
+
